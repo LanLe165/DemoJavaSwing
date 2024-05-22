@@ -75,10 +75,11 @@ public class LogInFrame extends JFrame {
 				if(controller.AccountController.checkAccount(txtUser.getText(), txtPass.getText()) == 1){
 					CafeFrame cf = new CafeFrame();
 					cf.setVisible(true);
-					setVisible(false);
+					
 				}else {
 					FailureDialog f = new FailureDialog(LogInFrame.this);
 					f.setVisible(true);
+					setVisible(false);
 				}
 			}
 		});
@@ -91,7 +92,7 @@ public class LogInFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				SignUpFrame sg = new SignUpFrame();
 				sg.setVisible(true);
-				setVisible(false);
+			
 			}
 		});
 		btnngK.setFont(new Font("Times New Roman", Font.PLAIN, 16));

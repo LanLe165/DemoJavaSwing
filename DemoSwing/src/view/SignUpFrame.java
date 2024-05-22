@@ -48,7 +48,7 @@ public class SignUpFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public SignUpFrame() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -127,7 +127,17 @@ public class SignUpFrame extends JFrame {
 			}
 		});
 		btnngK.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-		btnngK.setBounds(158, 215, 121, 38);
+		btnngK.setBounds(218, 216, 121, 38);
 		contentPane_1.add(btnngK);
+		
+		JButton btnNewButton = new JButton("< Quay lại");
+		btnNewButton.setFont(new Font("Times New Roman", Font.PLAIN, 16));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+			}
+		});
+		btnNewButton.setBounds(48, 217, 113, 36);
+		contentPane_1.add(btnNewButton);
 	}
 }

@@ -295,6 +295,13 @@ public class CafeFrame extends JFrame {
 		panel.add(btnRefresh);
 		
 		JButton btnThanhToan = new JButton("THANH TOÁN");
+		btnThanhToan.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ThanhToanFrame tt = new ThanhToanFrame();
+				tt.setVisible(true);
+			}
+			
+		});
 		btnThanhToan.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		btnThanhToan.setBounds(537, 161, 171, 29);
 		panel.add(btnThanhToan);
